@@ -33,36 +33,15 @@
         <h2>Hello Sugarizer</h2>
         <h3>{{ message }}</h3>
 
-		<input type="button" value="Change Color" v-on:click="changeColor()"/>
-        <input type="button" value="Change Position" v-on:click="changePosition()"/>
-            
-		<icon ref="Icon"
+		<input type="button" value="changeText" v-on:click="changeText()"/>
+        <btn ref="btn"
 			id="1"
-			svgfile="icons/owner-icon.svg" 
-			color="8"
-			size="120"
-		></icon>
-		<icon ref="Icon"
-			id="2"
-			svgfile="icons/abcd.svg" 
-			color="96" 
-			size="40"
-		></icon>
-		<icon ref="Icon"
-			id="3"
-			svgfile="icons/star.svg" 
-			color="54" 
-			size="60"
-		></icon>
-		<icon ref="Icon"
-			id="4"
-			svgfile="icons/write.svg" 
-			color="30" 
-			size="70"
-		></icon>
+			text="one"
+		></btn>
     </div>
 
 	<script src="js/icon.js"></script>
+	<script src="js/button.js"></script>
 	<script src="js/app.js"></script>
   </body>
 </html>
