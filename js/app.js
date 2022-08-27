@@ -20,8 +20,8 @@ const app = Vue.createApp({
     },
     methods: {
         changeText() {
-            this.$refs.btn.iconId="1";
-            this.$refs.btn.label="two";
+            this.$refs.btn.iconData="1";
+            this.$refs.btn.textData="two";
         },
     },
 });

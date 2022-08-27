@@ -1,21 +1,21 @@
 const Btn ={
     name: 'Btn',
-    template: `<div v-html="genlabel" :id="this.id"></div>`,
+    template: `<div v-html="genTextData" :id="this.id"></div>`,
 	props: ['id','text'],
     data() {
         return {
-            label: this.text,
-            iconId: this.id
+            textData: this.text,
+            iconData: this.id
         }
     },
     computed: {
-		genlabel: function() {
-            _setLabel(this.iconId, this.label);
+		genTextData: function() {
+            _setTextData(this.iconData, this.textData);
         }
     },
     watch: {
-		label: function(newText, oldText) {
-			_setLabel(this.iconId, newText);
+		textData: function(newText, oldText) {
+			_setTextData(this.iconData, newText);
 		},   
     },
     methods: {
@@ -23,7 +23,7 @@ const Btn ={
     }
 };
 
-function _setLabel(icon, text) {
+function _setTextData(icon, text) {
 	setTimeout(function() { // HACK: Timeout need to wait for SVG to be build
 		let element = document.getElementById(icon);
 		if (element) {
