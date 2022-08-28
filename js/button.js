@@ -5,17 +5,17 @@ const Btn ={
     data() {
         return {
             textData: this.text,
-            iconData: this.id
+            idData: this.id
         }
     },
     computed: {
 		genTextData: function() {
-            _setTextData(this.iconData, this.textData);
+            _setTextData(this.idData, this.textData);
         }
     },
     watch: {
 		textData: function(newText, oldText) {
-			_setTextData(this.iconData, newText);
+			_setTextData(this.idData, newText);
 		},   
     },
     methods: {
